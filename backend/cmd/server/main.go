@@ -39,11 +39,6 @@ func main() {
 	// Start server
 	port := "8080"
 	fmt.Printf("🚀 Server starting on http://localhost:%s\n", port)
-	fmt.Println("📊 Endpoints available:")
-	fmt.Println("   GET  /api/feelings - Get all feelings")
-	fmt.Println("   POST /api/feelings - Save a feeling")
-	fmt.Println("   GET  /health       - Health check")
-
 	if err := http.ListenAndServe(":"+port, handler); err != nil {
 		log.Fatalf("Server failed to start: %v", err)
 	}
