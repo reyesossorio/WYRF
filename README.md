@@ -1,7 +1,7 @@
 # WYRF - Whatever you're feeling
 
 A simple web application for tracking your daily feelings throughout the week.
-
+  ![WYRF Screenshot](./assets/screenshot.png)
 ## Features
 
 - Track your feelings for each day of the week
