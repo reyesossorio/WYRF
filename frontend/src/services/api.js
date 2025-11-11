@@ -1,9 +1,5 @@
 const API_BASE_URL = 'http://localhost:8080';
 
-/**
- * Fetch all feelings from the backend
- * @returns {Promise<Array>} Array of feeling objects
- */
 export const getFeelings = async () => {
   try {
     const response = await fetch(`${API_BASE_URL}/api/feelings`);
@@ -20,12 +16,6 @@ export const getFeelings = async () => {
   }
 };
 
-/**
- * Save or update a feeling for a specific date
- * @param {string} date - Date in YYYY-MM-DD format
- * @param {string} feeling - Feeling type: 'happy', 'normal', or 'sad'
- * @returns {Promise<Object>} Response from server
- */
 export const saveFeeling = async (date, feeling) => {
   try {
     const response = await fetch(`${API_BASE_URL}/api/feelings`, {
@@ -48,10 +38,6 @@ export const saveFeeling = async (date, feeling) => {
   }
 };
 
-/**
- * Check backend health
- * @returns {Promise<Object>} Health status
- */
 export const checkHealth = async () => {
   try {
     const response = await fetch(`${API_BASE_URL}/health`);

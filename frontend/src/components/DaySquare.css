@@ -1,0 +1,87 @@
+.day-square {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.day-square-animate {
+  opacity: 0;
+  animation: rainfall 0.3s ease-out forwards;
+}
+
+@keyframes rainfall {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.day-square:hover {
+  transform: scale(1.15);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.day-square.selected {
+  border: 2px solid #2d3748;
+  transform: scale(1.2);
+}
+
+@media (max-width: 640px) {
+  .day-square {
+    width: 10px;
+    height: 10px;
+    border-radius: 1.5px;
+  }
+
+  .day-square.selected {
+    border-width: 1.5px;
+  }
+
+  .day-square.future-day {
+    border-width: 1px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .day-square {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.day-square.no-feeling {
+  background-color: #e2e8f0;
+}
+
+.day-square.future-day {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e0;
+}
+
+.day-square.disabled {
+  cursor: default;
+}
+
+.day-square.future-day:hover {
+  transform: none;
+  border-color: #cbd5e0;
+}
+
+.day-square.feeling-happy {
+  background-color: #f9e4a8;
+}
+
+.day-square.feeling-normal {
+  background-color: #b8e6c9;
+}
+
+.day-square.feeling-sad {
+  background-color: #a3d5f7;
+}

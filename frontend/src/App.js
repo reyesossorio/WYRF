@@ -1,10 +1,10 @@
 import './App.css';
-import WeekGrid from './components/WeekGrid';
+import YearGrid from './components/YearGrid';
 
 function App() {
   return (
     <div className="App">
-      <WeekGrid />
+      <YearGrid />
     </div>
   );
 }
